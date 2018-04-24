@@ -6,7 +6,8 @@
   "scripts": {
     "start": "parcel index.html --open",
     "build": "parcel build index.html --public-url ./",
-    "predeploy": "npm run build && echo www.stanleygarrett.com > ./dist/CNAME",
+    "clean": "rimraf dist && rimraf .cache",
+    "predeploy": "npm run clean && npm run build && echo www.stanleygarrett.com > ./dist/CNAME",
     "deploy": "gh-pages -d dist"
   },
   "repository": {
