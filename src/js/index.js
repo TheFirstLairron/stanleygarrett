@@ -1,10 +1,12 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 
-const App = (props) => {
+import App from './components/app';
+
+const Root = (props) => {
     return (
-        <div>Hello World</div>
+        <App />
     );
 }
 
-ReactDom.render(<App/>, document.getElementById("container"));
+ReactDom.render(<Root />, document.getElementById("container"));
